@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion - Crap Masters</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+        img { width: 100%; max-width: 500px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Congratulations!</h1>
+    <p>You’ve completed the Crap Masters course with a grade of <span id="final-grade"></span>%!</p>
+    
+    <!-- Insert the certificate image -->
+    <img src="images/Crap_Masters_Certificate.png" alt="Certificate of Completion">
+
+    <button onclick="window.print()">Print Certificate</button>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const finalGrade = urlParams.get('grade');
+        document.getElementById('final-grade').innerText = finalGrade;
+    </script>
+</body>
+</html>
